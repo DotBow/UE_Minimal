@@ -1,6 +1,6 @@
 # Parameters - change these as needed
-$oldSubstring = "Test"
-$newSubstring = "UE_Minimal"
+$oldSubstring = "UE_Minimal"
+$newSubstring = "MyProjectName"
 $extensions = @(".sln", ".uproject", ".cs", ".h", ".cpp")  # List your target extensions here
 
 # Get the script's filename to exclude it from processing
