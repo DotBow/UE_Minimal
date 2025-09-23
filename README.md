@@ -5,8 +5,9 @@ Template of the Unreal Engine 5 project with minimal hardware/software requireme
 Disabled:
 - Nanite
 - Lumen
-- GI
+- Global Illumination
 - Ray Tracing
+- Virtual Shadow Maps
 - Virtual Texture support
 - Generate Mesh Distance Fields
 - Default Auto Material Usage
@@ -15,4 +16,5 @@ Enabled:
 - DX11 RHI
 - Forward Shading
 - Static Lighting
-- SSR
+- Screen Space Reflections
+- Cascaded Shadow Maps
