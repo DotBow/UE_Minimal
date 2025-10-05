@@ -1,6 +1,6 @@
 # Parameters - change these as needed
 $oldSubstring = "UE_Minimal"
-$newSubstring = "MyProjectName"
+$newSubstring = "Luna"
 $extensions = @(".sln", ".uproject", ".cs", ".h", ".cpp")  # List your target extensions here
 
 # Get the script's filename to exclude it from processing
@@ -27,5 +27,17 @@ foreach ($file in $files) {
         $newFilePath = Join-Path -Path $file.DirectoryName -ChildPath $newFileName
         Rename-Item -Path $file.FullName -NewName $newFileName
         Write-Host "Renamed file: $($file.Name) -> $newFileName"
+    }
+}
+
+# Process directories for renaming
+$directories = Get-ChildItem -Directory -Recurse | Where-Object { $_.FullName -ne $scriptFileName }
+
+foreach ($dir in $directories) {
+    if ($dir.Name -like "*$oldSubstring*") {
+        $newDirName = $dir.Name -replace [regex]::Escape($oldSubstring), $newSubstring
+        $newDirPath = Join-Path -Path $dir.Parent.FullName -ChildPath $newDirName
+        Rename-Item -Path $dir.FullName -NewName $newDirName
+        Write-Host "Renamed folder: $($dir.FullName) -> $newDirPath"
     }
 }
