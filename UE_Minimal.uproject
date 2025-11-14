@@ -505,6 +505,25 @@
 		{
 			"Name": "IoStoreInsights",
 			"Enabled": false
+		},
+		{
+			"Name": "AudioInsights",
+			"Enabled": false
+		},
+		{
+			"Name": "GPUReshape",
+			"Enabled": false,
+			"SupportedTargetPlatforms": [
+				"Win64"
+			]
+		},
+		{
+			"Name": "SequenceValidator",
+			"Enabled": false
+		},
+		{
+			"Name": "SoundFields",
+			"Enabled": false
 		}
 	],
 	"TargetPlatforms": [
