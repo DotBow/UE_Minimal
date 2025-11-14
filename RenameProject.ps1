@@ -1,7 +1,8 @@
 # Parameters - change these as needed
 $oldSubstring = "UE_Minimal"
 $newSubstring = "Luna"
-$extensions = @(".sln", ".uproject", ".cs", ".h", ".cpp")  # List your target extensions here
+# Target extensions to check
+$extensions = @(".sln", ".uproject", ".cs", ".h", ".cpp", ".ini")
 
 # Get the script's filename to exclude it from processing
 $scriptFileName = $MyInvocation.MyCommand.Name
@@ -10,9 +11,9 @@ $scriptFileName = $MyInvocation.MyCommand.Name
 $files = Get-ChildItem -File -Recurse | Where-Object { $_.Name -ne $scriptFileName }
 
 foreach ($file in $files) {
-    # Check if the file extension matches your target list
+    # Check file extension
     if ($extensions -contains $file.Extension.ToLower()) {
-        # Replace in content
+        # Replace content
         $content = Get-Content -Path $file.FullName -Raw
         if ($content -like "*$oldSubstring*") {
             $newContent = $content -replace [regex]::Escape($oldSubstring), $newSubstring
