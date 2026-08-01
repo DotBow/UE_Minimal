@@ -35,6 +35,7 @@
 *.xcodeproj
 *.xcworkspace
 *.sln
+*.slnx
 *.suo
 *.opensdf
 *.sdf
@@ -73,3 +74,7 @@ Plugins/**/Intermediate/*
 
 # Cache files for the editor to use
 DerivedDataCache/*
+
+# Rider
+.idea
+UE_Minimal.sln.DotSettings.user
