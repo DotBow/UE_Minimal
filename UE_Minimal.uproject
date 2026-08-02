@@ -559,6 +559,34 @@
 		{
 			"Name": "InterchangeAssets",
 			"Enabled": false
+		},
+		{
+			"Name": "AnimatorKit",
+			"Enabled": false
+		},
+		{
+			"Name": "AudioModulationInsights",
+			"Enabled": false
+		},
+		{
+			"Name": "AudioInsightsRuntime",
+			"Enabled": false
+		},
+		{
+			"Name": "ControlRigPhysics",
+			"Enabled": false
+		},
+		{
+			"Name": "HttpInsights",
+			"Enabled": false
+		},
+		{
+			"Name": "InterchangeAxfAssets",
+			"Enabled": false
+		},
+		{
+			"Name": "MutableAssetUserData",
+			"Enabled": false
 		}
 	],
 	"TargetPlatforms": [
